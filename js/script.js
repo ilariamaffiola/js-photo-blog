@@ -30,7 +30,7 @@ axios.get('https://lanciweb.github.io/demo/api/pictures/').then((resp)=>{
         </div>
         <div class="card-body">
         <h5 id="date-card">${date}</h5>
-        <p id="description-card">${title}</p>
+        <p id="description-card">${title.toUpperCase()}</p>
         </div>
         </div>
         </div>`

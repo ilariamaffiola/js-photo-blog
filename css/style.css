@@ -14,12 +14,27 @@ h1{
     font-style: italic;
     font-size: 85px;
 }
+#date-card{
+    padding-top: 10px;
+    font-family: 'Sometype Mono', monospace;
+    font-size: 18px;
+    color: #8f96a3;
+    font-weight: 700;
+    margin: 0;
+}
+#description-card{
+    font-family:"Edu Tas Beginner", sans-serif;
+    font-size: 25px;
+    font-weight: 700;
+    margin: 0;
+}
 main{
     font-family: "Edu Tas Beginner", sans-serif;
     font-size: 20px;
 }
 .card-body{
     padding: 10px 0;
+    margin: 0;
 }
 .card{
     border-radius: 0px;
