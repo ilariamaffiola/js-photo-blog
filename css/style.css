@@ -42,10 +42,16 @@ h1{
     border-radius: 0px;
     position: relative;
 }
+.card:hover{
+    transform: rotate(10deg);
+    transition: 0.8s ease-in-out;
+    width: 105%;
+    cursor: pointer;
+}
 .pin{
     position: absolute;
     top: -15px;
-    left: 45%;
+    left: 46%;
 }
 .overlay{
     position: fixed;
