@@ -19,6 +19,23 @@ axios.get('https://lanciweb.github.io/demo/api/pictures/').then((resp)=>{
     //     //quindi andiamo a creare una card per ogni oggetto dell'array
     //     //creiamo la colonna
     // }
+    let createNewCard = (data) => {
+        const {url, title, date} = data;
+        //creiamo la colonna
+        const col = `<div class="col-lg-4 col-md-6 col-sm-12">
+        <div class="card p-3">
+        <img class="pin" src="./img/pin.svg" alt="">
+        <div class="card-img-top">
+        <img class="img-fluid w-100" src="${url}" alt="pic">
+        </div>
+        <div class="card-body">
+        <h5 id="date-card">${date}</h5>
+        <p id="description-card">${title}</p>
+        </div>
+        </div>
+        </div>`
+        return col;
+    }
 
 });
 //abbiamo le card già fatte in html, ora dobbiamo solo riempirle con i dati delle immagini cambiando l'attributo src delle immagini e il testo del titolo e del paragrafo, quindi dobbiamo selezionare le card e cambiare il loro contenuto. quindi andiamo a commentare in html quello che c'è all'interno delle card e andiamo a selezionare le card in js.
