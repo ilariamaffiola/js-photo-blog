@@ -68,4 +68,16 @@ cards.forEach(element => {
         }
 });
 });
+
+//Cliccando invece il button di chiusura, l’overlay scompare nuovamente.
+let button =document.getElementById('button');
+console.log(button);
+button.addEventListener('click', function(){
+    if(overlay.classList.contains('d-none')){
+        overlay.classList.remove('d-none');
+    }
+    else{
+        overlay.classList.add('d-none');
+    }
+});
 });
