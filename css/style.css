@@ -1,7 +1,16 @@
 header{
     height: 130px;
     background-image: url(../img/wall.png);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 body{
     background-image: url(../img/cork.png);
+}
+h1{
+    font-family: "Sometype Mono", monospace;
+    font-weight: 600;
+    font-style: italic;
+    font-size: 85px;
 }
