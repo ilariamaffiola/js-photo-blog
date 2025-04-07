@@ -36,7 +36,16 @@ axios.get('https://lanciweb.github.io/demo/api/pictures/').then((resp)=>{
         </div>`
         return col;
     }
-
+    let renderCard = (array) => {
+        let colls = '';
+        for (let i = 0; i < array.length; i++){
+            //creiamo la colonna
+            colls += createNewCard(array[i]);
+        }
+        row.innerHTML = colls;
+        console.log(colls);
+    }
+    renderCard(resp.data);
 });
 //abbiamo le card già fatte in html, ora dobbiamo solo riempirle con i dati delle immagini cambiando l'attributo src delle immagini e il testo del titolo e del paragrafo, quindi dobbiamo selezionare le card e cambiare il loro contenuto. quindi andiamo a commentare in html quello che c'è all'interno delle card e andiamo a selezionare le card in js.
 //quindi in un ciclo for vado a creare le col che ho commentato per la lunghezza dell'array di oggetti
