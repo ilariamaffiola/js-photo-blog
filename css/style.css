@@ -1,3 +1,8 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 header{
     height: 130px;
     background-image: url(../img/wall.png);
@@ -7,6 +12,7 @@ header{
 }
 body{
     background-image: url(../img/cork.png);
+    position: relative;
 }
 h1{
     font-family: "Sometype Mono", monospace;
@@ -28,10 +34,6 @@ h1{
     font-weight: 700;
     margin: 0;
 }
-main{
-    font-family: "Edu Tas Beginner", sans-serif;
-    font-size: 20px;
-}
 .card-body{
     padding: 10px 0;
     margin: 0;
@@ -44,4 +46,16 @@ main{
     position: absolute;
     top: -15px;
     left: 45%;
+}
+.overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    top: 0;
+}
+.btn{
+    margin-top: 15px;
+    border-radius: 0px;
+    font-size: 20px;
 }

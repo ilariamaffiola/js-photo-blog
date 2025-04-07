@@ -19,6 +19,7 @@ axios.get('https://lanciweb.github.io/demo/api/pictures/').then((resp)=>{
     //     //quindi andiamo a creare una card per ogni oggetto dell'array
     //     //creiamo la colonna
     // }
+    //abbiamo le card già fatte in html, ora dobbiamo solo riempirle con i dati delle immagini cambiando l'attributo src delle immagini e il testo del titolo e del paragrafo, quindi dobbiamo selezionare le card e cambiare il loro contenuto. quindi andiamo a commentare in html quello che c'è all'interno delle card e andiamo a selezionare le card in js.
     let createNewCard = (data) => {
         const {url, title, date} = data;
         //creiamo la colonna
@@ -38,17 +39,16 @@ axios.get('https://lanciweb.github.io/demo/api/pictures/').then((resp)=>{
     }
     let renderCard = (array) => {
         let colls = '';
+        //quindi in un ciclo for vado a creare le col che ho commentato per la lunghezza dell'array di oggetti
+        //inserisco il contenuto nel ciclo for e lo vado ad appendere alla row che abbiamo lasciato in html
         for (let i = 0; i < array.length; i++){
             //creiamo la colonna
             colls += createNewCard(array[i]);
         }
+        //quindi andiamo a selezionare la row e andiamo ad appendere le card create nel ciclo for
         row.innerHTML = colls;
         console.log(colls);
     }
     renderCard(resp.data);
 });
-//abbiamo le card già fatte in html, ora dobbiamo solo riempirle con i dati delle immagini cambiando l'attributo src delle immagini e il testo del titolo e del paragrafo, quindi dobbiamo selezionare le card e cambiare il loro contenuto. quindi andiamo a commentare in html quello che c'è all'interno delle card e andiamo a selezionare le card in js.
-//quindi in un ciclo for vado a creare le col che ho commentato per la lunghezza dell'array di oggetti
-//inserisco il contenuto nel ciclo for e lo vado ad appendere alla row che abbiamo lasciato in html
-//quindi andiamo a selezionare la row e andiamo ad appendere le card create nel ciclo for
 //in questo modo abbiamo creato le card in js e non in html, quindi possiamo anche decidere di fare un numero di card diverso da quelle che abbiamo in html, quindi se un giorno cambiasse il numero di elementi nell'array di oggetti ottenuto possiamo farlo senza problemi, perché tanto nel ciclo for metteremo la lunghezza dell'array di oggetti e non un numero specifico.
