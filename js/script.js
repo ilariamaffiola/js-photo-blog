@@ -66,7 +66,13 @@ cards.forEach(element => {
         else{
             overlay.classList.add('d-none');
         }
-});
+    //Inseriamo il pezzo di logica finale: quando una foto viene cliccata, dobbiamo fare in modo che sia proprio quella foto a essere mostrata all’interno dell’overlay.
+    let imgCards = element.querySelector('.card-img-top img');
+    console.log(imgCards.src);
+    let imgOverlay = document.querySelector('.img-overlay');
+    console.log(imgOverlay.src);
+    imgOverlay.src = imgCards.src;
+    });
 });
 
 //Cliccando invece il button di chiusura, l’overlay scompare nuovamente.
@@ -80,4 +86,5 @@ button.addEventListener('click', function(){
         overlay.classList.add('d-none');
     }
 });
+
 });

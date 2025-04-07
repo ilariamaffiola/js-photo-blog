@@ -59,3 +59,6 @@ h1{
     border-radius: 0px;
     font-size: 20px;
 }
+.overlay img{
+    width: 600px;
+}
