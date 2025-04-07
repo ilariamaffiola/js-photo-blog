@@ -14,3 +14,19 @@ h1{
     font-style: italic;
     font-size: 85px;
 }
+main{
+    font-family: "Edu Tas Beginner", sans-serif;
+    font-size: 20px;
+}
+.card-body{
+    padding: 10px 0;
+}
+.card{
+    border-radius: 0px;
+    position: relative;
+}
+.pin{
+    position: absolute;
+    top: -15px;
+    left: 45%;
+}
